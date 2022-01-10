@@ -1,0 +1,17 @@
+spring:
+  kafka:
+    producer:
+      bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVER}
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      acks: 1
+      client-id: 1
+kafka:
+  topic:
+    name: "kafka_topic"
+    partitions: 10
+    replicas: 1
+    group_id: "group_id"
+springdoc:
+  swagger-ui:
+    path: /swagger-ui-custom.html
